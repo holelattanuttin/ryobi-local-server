@@ -70,7 +70,7 @@ def _server_ssl_context(certfile: str, keyfile: str):
     ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
     with warnings.catch_warnings():
         warnings.simplefilter("ignore", DeprecationWarning)
-        ctx.minimum_version = ssl.TLSVersion.TLSv1
+        ctx.minimum_version = ssl.TLSVersion.TLSv1_2
     # ALL, not DEFAULT: the door's list is the old SHA-1 and CBC suites.
     ctx.set_ciphers("ECDHE-RSA-AES128-SHA256")
     ctx.load_cert_chain(certfile=certfile, keyfile=keyfile)
