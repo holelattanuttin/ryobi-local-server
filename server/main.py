@@ -62,7 +62,7 @@ def _server_ssl_context(certfile: str, keyfile: str):
 
     tti.tiwiconnect.com still accepts TLS 1.0 with ECDHE-RSA-AES128-SHA.
     OpenSSL 3's default is TLS 1.2 at security level 2, which answered the
-    door with NO_SHARED_SIGNATURE_ALGORITHMS and then NO_SHARED_CIPHER.
+    door with NO_SHARED_SIGNATURE_ALGORITHMS and then NO_SHARED_.
     """
     import ssl
     import warnings
@@ -72,7 +72,7 @@ def _server_ssl_context(certfile: str, keyfile: str):
         warnings.simplefilter("ignore", DeprecationWarning)
         ctx.minimum_version = ssl.TLSVersion.TLSv1
     # ALL, not DEFAULT: the door's list is the old SHA-1 and CBC suites.
-    ctx.set_ciphers("ALL:@SECLEVEL=0")
+    ctx.set_ciphers("ECDHE-RSA-AES128-CBC-SHA256")
     ctx.load_cert_chain(certfile=certfile, keyfile=keyfile)
     LOGGER.info(
         "TLS for the opener: %d ciphers, minimum %s",
