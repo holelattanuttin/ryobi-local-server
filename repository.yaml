@@ -1,4 +1,4 @@
 ---
-name: "Ryobi GDO Local Server Add-ons"
-url: "https://github.com/catduckgnaf/ryobi-local-server"
-maintainer: "catduckgnaf"
+name: "Ryobi GDO Local Server Add-ons (test cert suite)"
+url: "https://github.com/holelattanuttin/ryobi-local-server"
+maintainer: "catduckgnaf via holelattanuttin"
