@@ -1,6 +1,6 @@
 ---
 name: "Ryobi GDO Local Server"
-version: "1.1.10"
+version: "1.1.11"
 slug: "ryobi_gdo_local"
 description: "Local TiwiConnect emulator for Ryobi GDO with built-in DNS redirect"
 url: "https://github.com/holelattanuttin/ryobi-local-server"
